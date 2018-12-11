@@ -17,5 +17,10 @@ public class CalculatorTest {
 	public void testSummeNatuerlicheZahlen() {
 		assertTrue(tester.summe(10, 25) == 35);
 	}
+	
+	@Test
+	public void testSubstraktionNatuerlicheZahlen() {
+		assertTrue(tester.substraktion(25, 10) == 15);
+	}
 
 }
