@@ -6,8 +6,16 @@ package ch.bbw.ConsoleCalculator;
  */
 public class App 
 {
-    public static void main( String[] args )
+	public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+    	Calculator calculator = new Calculator();
+    	
+    	System.out.println("Console Calculator");
+    	System.out.println("**********************");
+    	System.out.println();
+    	
+    	int valueA = 5;
+    	int valueB = 10;
+    	System.out.println("Summe " + valueA + " + " + valueB +" = " + calculator.summe(valueA, valueB));
     }
 }
