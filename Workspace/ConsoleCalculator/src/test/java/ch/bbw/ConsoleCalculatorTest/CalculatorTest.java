@@ -1,9 +1,11 @@
-package ch.bbw.ConsoleCalculator;
+package ch.bbw.ConsoleCalculatorTest;
 
 import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import ch.bbw.ConsoleCalculator.Calculator;
 
 public class CalculatorTest {
 	Calculator tester;
