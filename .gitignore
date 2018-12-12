@@ -25,4 +25,5 @@ hs_err_pid*
 # Eclipse Files
 Workspace/.metadata/
 Workspace/.recommenders/
+Workspace/ConsoleCalculator/bin
 
