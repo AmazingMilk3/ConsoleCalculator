@@ -1,9 +1,12 @@
-package ch.bbw.ConsoleCalculator;
+package ch.bbw.ConsoleCalculatorTest;
 
 import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import ch.bbw.ConsoleCalculator.Calculator;
+import javafx.scene.control.SplitPane.Divider;
 
 public class CalculatorTest {
 	Calculator tester;
@@ -22,5 +25,16 @@ public class CalculatorTest {
 	public void testSubstraktionNatuerlicheZahlen() {
 		assertTrue(tester.substraktion(25, 10) == 15);
 	}
+	
+	@Test(expected=ArithmeticException.class)
+	public void testDivisionDurchNull() {
+			tester.division(0, 0);
+	}
+	
+	@Test
+	public void testDivisionNatuerlicheZahlen() throws ArithmeticException {
+		tester.division(10, 10);
+	}
+	
 
 }
