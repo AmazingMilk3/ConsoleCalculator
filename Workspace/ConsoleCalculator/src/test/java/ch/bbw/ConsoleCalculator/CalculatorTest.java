@@ -1,6 +1,8 @@
-package ch.bbw.ConsoleCalculatorTest;
+package ch.bbw.ConsoleCalculator;
 
 import static org.junit.Assert.*;
+
+import java.lang.reflect.*;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -22,13 +24,30 @@ public class CalculatorTest {
 	}
 	
 	@Test
+	public void testSummeNatuerlicheZahlenProtected() {
+		assertTrue(tester.summeProtected(10, 25) == 35);
+	}
+	
+	@Test
+	public void testSummeNatuerlicheZahlenPackage() {
+		assertTrue(tester.summePackage(10, 25) == 35);
+	}
+	
+	@Test
+	public void testSummeNatuerlicheZahlenPrivate() throws IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException {
+		Method method = Calculator.class.getDeclaredMethod("summePrivate", int.class, int.class);
+		method.setAccessible(true);
+		assertTrue((Integer) method.invoke(tester, 10, 25) == 35);
+	}
+	
+	@Test
 	public void testSubstraktionNatuerlicheZahlen() {
 		assertTrue(tester.substraktion(25, 10) == 15);
 	}
 	
 	@Test(expected=ArithmeticException.class)
 	public void testDivisionDurchNull() {
-			tester.division(0, 0);
+		tester.division(0, 0);
 	}
 	
 	@Test
