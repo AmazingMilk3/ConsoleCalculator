@@ -13,6 +13,12 @@ public class Calculator {
 	public int division(int v1, int v2) throws ArithmeticException {
 		return v1 / v2;
 	}
+	
+	public String dezimalToBinary(int v) {
+		return Integer.toBinaryString(v);
+	}
+	
+	// Visibility Methods
 
 	protected int summeProtected(int v1, int v2) {
 		return v1 + v2;
