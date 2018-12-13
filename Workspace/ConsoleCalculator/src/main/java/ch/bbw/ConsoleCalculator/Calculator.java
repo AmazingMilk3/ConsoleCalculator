@@ -14,7 +14,7 @@ public class Calculator {
 		return v1 / v2;
 	}
 	
-	public String dezimalToBinary(int v) {
+	public String dezimalZuBinär(int v) {
 		return Integer.toBinaryString(v);
 	}
 	
