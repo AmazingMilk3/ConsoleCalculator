@@ -8,7 +8,6 @@ import org.junit.Before;
 import org.junit.Test;
 
 import ch.bbw.ConsoleCalculator.Calculator;
-import javafx.scene.control.SplitPane.Divider;
 
 public class CalculatorTest {
 	Calculator tester;
