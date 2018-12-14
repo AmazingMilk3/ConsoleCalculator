@@ -143,6 +143,28 @@ public class CalculatorTest {
 		assertTrue(tester.division(Integer.MAX_VALUE, Integer.MIN_VALUE+1) == -1);
 	}
 	
+	// Integer to Binary Tests
+	
+	@Test
+	public void testIntZuBinär1() {
+		assertTrue(tester.dezimalZuBinär(1).equals("1"));
+	}
+	
+	@Test
+	public void testIntZuBinär0() {
+		assertTrue(tester.dezimalZuBinär(0).equals("0"));
+	}
+	
+	@Test
+	public void testIntZuBinärZweistellig() {
+		assertTrue(tester.dezimalZuBinär(10).equals("1010"));
+	}
+	
+	@Test
+	public void testIntZuBinärMAX() {
+		assertTrue(tester.dezimalZuBinär(Integer.MAX_VALUE).equals("1111111111111111111111111111111"));
+	}
+	
 	// Visibility Tests
 	
 	@Test
