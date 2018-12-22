@@ -1,0 +1,4 @@
+before_script: cd Workspace/ConsoleCalculator
+language: java
+sudo: false
+script: mvn install
