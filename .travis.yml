@@ -1,3 +1,4 @@
+before_script: cd Workspace/ConsoleCalculator
 language: java
 sudo: false
-script: mvn compile -f Workspace/ConsoleCalculator/pom.xml
+script: mvn test
