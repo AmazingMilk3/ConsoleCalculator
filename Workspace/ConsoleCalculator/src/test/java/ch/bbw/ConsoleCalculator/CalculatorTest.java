@@ -1,4 +1,4 @@
-package ch.bbw.ConsoleCalculatorTest;
+package ch.bbw.ConsoleCalculator;
 
 import static org.junit.Assert.*;
 
