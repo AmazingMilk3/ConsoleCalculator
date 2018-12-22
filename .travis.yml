@@ -2,3 +2,10 @@ before_script: cd Workspace/ConsoleCalculator
 language: java
 sudo: false
 script: mvn install
+deploy:
+  provider: releases
+  api_key:
+    secure: 0M3pJzteNu2zlaAcrSl+AICHTkP3iz5Erb0gk/3uAN6cNY6mO1YrRDWqySwesZiqAPyhUtBBr7GI83E4vCOc4nGhsRuDthNk6zz54dGtKSVYEroRf5WTZ5wAD0SOYnee+2kb4uHvfTkKJhLC8SF4DEJMRs9RrGBEAth9LIH5TGJ9igFagapeHDgm5M2ElmozySbntHOuxOQTH25jPzXMD642+Sp4jkVf9jJ7rcNhunrR7PELGKa5lpml9RKoDEfM2PZ5GAwfMOa3m0awQ4woRcfxFZY9JACMFh1iM+8NR0/mYrFaJgkAS5HEl9dh/NT2mjsjFEXKb3WZf2l1dyWfF2cEZNMkxrHnw43tk8KSIxH1T8lVC67ZTBoIYcWTqdK64BnKgesC/wXtTOCgAF81eqNbA3aEgAWtAajl7oh6vsHI9cEUbFkY2hw6dtJjfvQKdiR+Arh96ujCDxj6QrJXKo6zsDh161pbA/fBRFjO8mj17fhKiXBA/xCAFOnIygk0tGSLcSxdmjxqajvAIdoyc+DDOQSqhxEZPDMjPKHMgth2/3rg4js9tboVgFRAnPr+X+1xRuRDrJDebREh6FmNWft6fnpvtJD6GkDFaqNUxEIBBVzZzZMzQVQLBVtjfAY5ht/qKDNMPfG0L7CrCP9abYaLCcYJPWtc2jDMuqMhWds=
+  file: "/home/travis/.m2/repository/ch/bbw/ConsoleCalculator/0.0.1SNAPSHOT/onsoleCalculator-0.0.1-SNAPSHOT.jar"
+  on:
+    repo: AmazingMilk3/ConsoleCalculator
